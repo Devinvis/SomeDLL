@@ -4,6 +4,17 @@ using System.Text;
 
 namespace CalcGeometricFigure
 {
+    public class Calc
+    {
+        void CalcMethod()
+        {
+            Runner run = new Runner(new Circle(90));
+            Runner run2 = new Runner(new Triangle(90, 65, 23.77));
+
+            double chislo = run.GetFigureArea();
+            double chislo2 = run2.GetFigureArea();
+        }
+    }
     public class Runner
     {
         IFigure _figure;
@@ -16,7 +27,7 @@ namespace CalcGeometricFigure
         /// Вычисление
         /// </summary>
         /// <returns></returns>
-        double GetFigureArea()
+        public double GetFigureArea()
         {
             return _figure.CalculateArea();
         }
